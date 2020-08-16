@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#home-sec").show();
+            $("#news-sec").hide();
+            $("#contact-sec").hide();
+            $("#about-sec").hide();
+
+            $('#home').click(function(){
+                $("#home-sec").show();
+                $("#news-sec").hide();
+                $("#contact-sec").hide();
+                $("#about-sec").hide();
+
+                $("#home").addClass("active");
+                $("#news").removeClass("active");
+                $("#contact").removeClass("active");
+                $("#about").removeClass("active");
+            });
+
+            $('#news').click(function(){
+                $("#home-sec").hide();
+                $("#news-sec").show();
+                $("#contact-sec").hide();
+                $("#about-sec").hide();
+
+                $("#news").addClass("active");
+                $("#contact").removeClass("active");
+                $("#about").removeClass("active");
+                $("#home").removeClass("active");
+            });
+
+            $('#contact').click(function(){
+                $("#home-sec").hide();
+                $("#news-sec").hide();
+                $("#contact-sec").show();
+                $("#about-sec").hide();
+
+                $("#contact").addClass("active");
+                $("#about").removeClass("active");
+                $("#home").removeClass("active");
+                $("#news").removeClass("active");
+
+            });
+
+            $('#about').click(function(){
+                $("#home-sec").hide();
+                $("#news-sec").hide();
+                $("#contact-sec").hide();
+                $("#about-sec").show();
+
+                $("#about").addClass("active");
+                $("#home").removeClass("active");
+                $("#news").removeClass("active");
+                $("#contact").removeClass("active");
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    
+    <div class="sidebar">
+        <a class="active" href="#" id="home">Home</a>
+        <a href="#" id="news">News</a>
+        <a href="#" id="contact">Contact</a>
+        <a href="#" id="about">About</a>
+    </div>
+
+    <div class="content">
+        <div id="home-sec">
+            <h2>Click From Home</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam fuga vel assumenda maxime, ut itaque eaque magni totam soluta? Illo unde adipisci debitis accusamus reprehenderit error veniam sequi incidunt?</p>
+        </div>
+        <div id="news-sec">
+            <h2>Click From News</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam fuga vel assumenda maxime, ut itaque eaque magni totam soluta? Illo unde adipisci debitis accusamus reprehenderit error veniam sequi incidunt?</p>
+        </div>
+        <div id="contact-sec">
+            <h2>Click From Contact</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam fuga vel assumenda maxime, ut itaque eaque magni totam soluta? Illo unde adipisci debitis accusamus reprehenderit error veniam sequi incidunt?</p>
+        </div>
+        <div id="about-sec">
+            <h2>Click From About</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam fuga vel assumenda maxime, ut itaque eaque magni totam soluta? Illo unde adipisci debitis accusamus reprehenderit error veniam sequi incidunt?</p>
+        </div>
+    </div>
+
+</body>
+</html>
